@@ -269,7 +269,8 @@ a { text-decoration: none; color: inherit; }
   }
 
   .subscribe-btn {
-    margin-top: 16px;
+    margin-top: 16px; 
+    display: none;
   }
 
   .hamburger {
