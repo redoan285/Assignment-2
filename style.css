@@ -252,35 +252,87 @@ a { text-decoration: none; color: inherit; }
 @keyframes slow-rotate { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }
 
 /* ================= MEDIA QUERIES ================= */
-@media (max-width: 992px) {
-  .hamburger { display: block; }
-  .nav-links {
-    position: absolute;
-    top: 100%; left: 0; right: 0;
-    background: #1A0B2E;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px 0;
-    height: 0;
-    overflow: hidden;
-    transition: height 0.4s ease;
-    z-index: 10;
+@media (max-width: 576px) {
+
+  /* NAVBAR */
+  .nav {
+    flex-wrap: wrap;
   }
-  #nav-toggle:checked ~ .nav-links { height: auto; border-top: 1px solid #444; }
-  .card-container { grid-template-columns: repeat(2, 1fr); }
-  .first-card, .second-card { grid-column: auto; grid-row: auto; }
-  .video-card { flex: 0 0 45%; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .subscribe-btn {
+    margin-top: 16px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* HERO */
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero-btns-container {
+    flex-direction: column;
+  }
+
+  /* STATS */
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* WHY CHOOSE */
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .first-card,
+  .second-card {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  /* FEATURED VIDEOS */
+  .video-card {
+    flex: 0 0 100%;
+  }
+
+  /* HOST */
+  .intro-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* FOOTER */
+  .foter-icon {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 
-@media (max-width: 576px) {
-  .nav { flex-direction: column; gap: 15px; text-align: center; }
-  .hero { padding: 60px 15px 80px; }
-  .hero h1 { font-size: 32px; }
-  .hero-btns-container { flex-direction: column; }
-  .stats { grid-template-columns: repeat(2, 1fr); }
-  .card-container { grid-template-columns: 1fr; }
-  .video-card { flex: 0 0 90%; max-width: 500px; }
-  .video-card-container { flex-direction: column; align-items: center; }
-  .intro-card { flex-direction: column; text-align: center; }
+
+/* Large Device (≥ 992px) */
+@media (min-width: 992px) {
+
+  .nav-links {
+    display: flex;
+  }
+
+  .hamburger {
+    display: none;
+  }
 }
+
