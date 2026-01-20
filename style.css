@@ -52,7 +52,7 @@ a { text-decoration: none; color: inherit; }
 .hamburger { display: none; cursor: pointer; }
 .hamburger img { width: 32px; height: 32px; object-fit: contain; }
 
-/* ================= HERO ================= */
+/* @@ HERO @@ */
 .hero {
   text-align: center;
   padding: 90px 20px 110px;
@@ -71,6 +71,7 @@ a { text-decoration: none; color: inherit; }
   left: 50%;
   width: 120px;
   transform: translate(-50%, -50%);
+  animation: slow-rotate 12s linear infinite;
 }
 .mic-badge {
   position: absolute;
@@ -109,7 +110,7 @@ a { text-decoration: none; color: inherit; }
   transform: translateY(-3px);
 }
 
-/* ================= COMMON SECTION ================= */
+/* @@ COMMON SECTION @@*/
 .section {
   max-width: 1200px;
   margin: auto;
@@ -248,6 +249,7 @@ a { text-decoration: none; color: inherit; }
 /* Animations */
 @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.08); opacity: 0.9; } }
 @keyframes plusanimated { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.07); } }
+@keyframes slow-rotate { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }
 
 /* ================= MEDIA QUERIES ================= */
 @media (max-width: 992px) {
